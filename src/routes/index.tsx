@@ -15,7 +15,7 @@ import {
 import {
   RouteListJobsOnlinePage,
   routeListJobsOnlinePage,
-} from "../pages/job-online";
+} from "../pages/job-online/router";
 
 const routers: RouteObject[] = [
   {
@@ -25,8 +25,8 @@ const routers: RouteObject[] = [
       ...routerAuth,
       ...routePostJob,
       ...routePostContest,
-      ...routeListJobsOnlinePage,
       ...routeFindFreelancer,
+      ...routeListJobsOnlinePage,
     ],
   },
 ];
