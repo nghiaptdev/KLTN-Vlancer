@@ -18,7 +18,7 @@ export const InputSearch: React.FC<InputSearchProps> = () => {
         </div>
       </Form.Item>
       <Form.Item className="!my-0 !py-0">
-        <Button type="primary" htmlType="submit" className="w-[150px] ">
+        <Button type="primary" htmlType="submit" className=" w-[150px] ">
           {t("search")}
         </Button>
       </Form.Item>

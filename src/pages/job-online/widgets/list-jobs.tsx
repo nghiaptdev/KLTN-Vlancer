@@ -1,6 +1,7 @@
 import { DollarCircleFilled } from "@ant-design/icons";
-import { Divider } from "antd";
+import { Divider, Image } from "antd";
 import { Link } from "react-router-dom";
+import { systemRoutes } from "../../../routes";
 import { formatNumber } from "../../../untils/string";
 import configsListJobs from "../json/list-jobs.json";
 
@@ -14,7 +15,7 @@ export const ListJobs: React.FC<ListJobsProps> = () => {
           className="border-t space-y-3 flex flex-col  py-6 px-4"
           key={item.id}
         >
-          <Link to={"/"} className="">
+          <Link to={systemRoutes.Job_Detail_ROUTE} className="">
             <h2 className="text-blue-500 m-0 p-0">{item.jobname}</h2>
           </Link>
           <div className="flex space-x-1 items-center">
@@ -31,6 +32,11 @@ export const ListJobs: React.FC<ListJobsProps> = () => {
             </p>
           </div>
           <span className="line-clamp-2">{item.describe}</span>
+          <div className="flex space-x-2">
+            {item.image.map((img, i) => (
+              <Image src={img} key={i} width={60} height={60} />
+            ))}
+          </div>
         </div>
       ))}
     </div>
